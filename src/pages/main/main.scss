@@ -1,0 +1,220 @@
+@import "../../commonstyle/var";
+@import "../../commonstyle/base";
+
+/*--------------------------左侧导航--------------------------*/
+.left-nav-container {
+    width: 240px;
+    height: 100vh;
+    overflow: auto;
+    transition: transform .5s ease;
+    transform: translateX(0);
+}
+
+.left-nav-container::-webkit-scrollbar {
+    display: none;
+}
+
+/*--------------------------主体内容--------------------------*/
+.main-content-container {
+    min-width: 1040px;
+    max-width: 1920px;
+    margin: auto;
+    position: absolute;
+    height: 100vh;
+    left: 240px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    user-select: none;
+    transition: left .5s ease;
+}
+
+/*顶部信息栏*/
+.top-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1000;
+    @extend %cube-shadow;
+    .top-container-first {
+        height: 70px;
+        background-color: #FFFFFF;
+        .icon-toggle-btn {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 20px;
+            cursor: pointer;
+            &:hover {
+                color: $hover-color;
+            }
+        }
+        .icon-btn-list {
+            display: inline-block;
+            height: 70px;
+            padding: 20px 50px;
+            .icon-btn {
+                float: left;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                margin-right: 30px;
+                position: relative;
+                cursor: pointer;
+                i.iconfont {
+                    font-size: 24px;
+                    font-weight: bold;
+                    line-height: 30px;
+                    color: #333333;
+                }
+                &:hover > i.iconfont {
+                    color: $hover-color;
+                }
+                .badge {
+                    position: absolute;
+                    display: inline-block;
+                    top: -4px;
+                    right: -8px;
+                    padding: 1px 4px;
+                    font-size: 14px;
+                    height: 16px;
+                    line-height: 16px;
+                    color: #FFFFFF;
+                    border-radius: 8px;
+                }
+            }
+        }
+        div {
+            .search-bar-cube {
+                display: inline-block;
+                position: relative;
+                .search-btn {
+                    color: #666666;
+                    position: absolute;
+                    line-height: 30px;
+                    width: 30px;
+                    text-align: center;
+                    top: 20px;
+                    right: 10px;
+                    cursor: pointer;
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+                .search-bar {
+                    float: right;
+                    display: inline-block;
+                    margin: 17px 0;
+                    .el-input__inner {
+                        border-radius: 18px;
+                        background-color: #F7F7F7;
+                    }
+                }
+            }
+            .user-menu {
+                display: inline-block;
+                margin: 0 20px 0 60px;
+                line-height: 40px;
+                padding: 15px 0;
+                cursor: pointer;
+                .user-menu-head {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+                .user-menu-name {
+                    font-size: 16px;
+                    margin-left: 10px;
+                    color: #666666;
+                }
+                &:hover {
+                    background-color: #FAFAFA;
+                    .user-menu-name {
+                        color: $hover-color;
+                    }
+                }
+            }
+            .menu-info-badge {
+                display: inline-block;
+                float: right;
+                font-size: 12px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 10px;
+                padding: 0 6px;
+                color: #FFFFFF;
+                margin: 8px;
+            }
+            .menu-icon-style {
+                float: right;
+                margin-right: 16px;
+            }
+        }
+    }
+    .top-container-second {
+        height: 80px;
+        background-color: #F7F7F7;
+        .bread-title {
+            line-height: 50px;
+            color: #4E4E55;
+            padding: 0 20px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: block;
+            //text-shadow: 2px 6px 7px #c4b59d, 0 -2px 1px #DBDBDB;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .bread-list {
+            list-style: none;
+            padding: 0 20px;
+            .bread-item {
+                font-size: 16px;
+                float: left;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .bread-sign {
+                float: left;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+/*主体*/
+.content-container {
+    padding: 20px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /*自定义滚动条*/
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        background-color: $scrollbar-bgcolor;
+    }
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 3px $scrollbar-shadow-color;
+        border-radius: 5px;
+        background-color: $scrollbar-bgcolor;
+    }
+    &::-webkit-scrollbar-thumb {
+        /*width: 10px;*/
+        height: 10px;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 3px $scrollbar-shadow-color;
+        background-color: $scrollbar-color;
+    }
+}

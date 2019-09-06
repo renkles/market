@@ -1,0 +1,107 @@
+@import "../../commonstyle/base";
+
+%login-background-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    user-select: none;
+    .login-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 840px;
+        height: 540px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 2px #A4B5D4;
+        overflow: hidden;
+        z-index: 100;
+        .login-box-left {
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            background-color: #3364FF;
+            text-align: center;
+            .login-logo {
+                width: 104px;
+                height: 80px;
+                margin-top: 50%;
+            }
+            .logo-desc {
+                color: #FBFCFF;
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+        .login-box-right {
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            background-color: #FFFFFF;
+            .login-title {
+                line-height: 25px;
+                font-size: 18px;
+                padding: 20px;
+                .title-logo {
+                    width: 33px;
+                    line-height: 25px;
+                    margin-right: 10px;
+                }
+            }
+            .login-form {
+                width: 240px;
+                height: 260px;
+                margin: 80px 0 0 90px;
+                .form-title {
+                    line-height: 20px;
+                    font-size: 16px;
+                    margin-bottom: 40px;
+                }
+                .form-cube {
+                    width: 100%;
+                    height: 60px;
+                    margin: 10px 0;
+                    .check-list {
+                        display: inline-block;
+                        line-height: 60px;
+                    }
+                    .form-label {
+                        color: #888888;
+                    }
+                    .el-input__inner{
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                        border-radius: 0;
+                        padding-left: 2px;
+                    }
+                }
+            }
+        }
+    }
+    //背景图
+    .current-login-bgimg {
+        @extend %login-background-img;
+    }
+    .bg-show-block {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.1);
+        z-index: 10;
+    }
+}
+
+

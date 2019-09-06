@@ -1,0 +1,27 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.check-clock {
+    position: relative;
+    background-color: #FFFFFF;
+    min-height: 300px;
+    @extend %cube-shadow;
+    .check-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .table-box {
+        padding: 15px 20px 0 20px;
+        .table-style {
+            @extend %table-style;
+        }
+        .batch-btn {
+            padding: 15px 0;
+        }
+    }
+    .pagination-box {
+        text-align: center;
+        padding: 20px 0;
+    }
+}

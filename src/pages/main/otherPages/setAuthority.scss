@@ -1,0 +1,82 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+$selected-color: #1C7AFF;
+%selected-color {
+    color: $selected-color;
+}
+
+
+.left-list-block {
+    display: inline-block;
+    width: 38%;
+    margin-right: 2%;
+    border-radius: 6px;
+    height: 720px;
+    @extend %cube-shadow;
+    .left-block-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+        .block-control-btn {
+            margin: 10px 20px;
+            @extend %refresh-btn;
+        }
+    }
+    .tree-container {
+        height: 610px;
+        margin-top: 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+.right-list-block {
+    display: inline-block;
+    width: 60%;
+    border-radius: 6px;
+    height: 720px;
+    @extend %cube-shadow;
+    .right-block-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+        .block-control-btn {
+            margin: 10px 20px;
+            @extend %refresh-btn;
+        }
+        .block-control-edit {
+            margin: 10px 15px 10px 0;
+            display: inline-block;
+            float: right;
+            height: 30px;
+            color: #0D93FF;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover {
+                color: #FF0000;
+            }
+        }
+    }
+    .tree-container {
+        height: 610px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .confirm-btn-block {
+        height: 60px;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+
+.selected-icon {
+    float: right;
+    margin-right: 20px;
+    @extend %selected-color;
+}
+.selected-text {
+    @extend %selected-color;
+}

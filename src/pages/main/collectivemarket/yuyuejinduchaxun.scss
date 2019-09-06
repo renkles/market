@@ -1,0 +1,86 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.query-top-block {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 380px;
+    @extend %cube-shadow;
+    .query-top-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .query-table {
+        @extend %table-style;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .pagination-box {
+        position: absolute;
+        bottom: 0;
+        height: 62px;
+        width: 100%;
+        padding-top: 15px;
+        text-align: center;
+    }
+}
+
+.query-bottom-block {
+    position: relative;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    height: 320px;
+    @extend %cube-shadow;
+    .query-top-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .query-bottom-cube {
+        .bottom-left-cube {
+            display: inline-block;
+            width: 50%;
+            margin-right: 5%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-top: 40px;
+            .left-cube-item {
+                padding: 15px 10%;
+                .cube-item-desc {
+                    line-height: 36px;
+                }
+                .slider-cube {
+                    background-color: #E9EBEF;
+                    width: 100%;
+                    height: 10px;
+                    border-radius: 5px;
+                    .progress-slider {
+                        height: 100%;
+                        border-radius: 5px;
+                        width: 0;
+                        transition: width 2s ease;
+                    }
+                }
+            }
+        }
+        .bottom-right-cube {
+            width: 45%;
+            height: 270px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            .right-cube-item {
+                display: inline-block;
+                width: 40%;
+                height: 100%;
+                padding-top: 60px;
+                margin: 0 5%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+

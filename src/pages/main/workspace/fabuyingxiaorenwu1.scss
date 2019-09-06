@@ -1,0 +1,114 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.task-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @extend %cube-shadow;
+    transition: transform .3s ease;
+    margin-bottom: 40px;
+    .task-market-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .task-market-block {
+        position: relative;
+        display: inline-block;
+        width: 50%;
+        min-height: 840px;
+        .task-market-list {
+            .task-market-item {
+                padding: 10px 0;
+                border-bottom: 1px solid #F2F2F2;
+                .input-label {
+                    text-align: right;
+                    line-height: 36px;
+                    font-size: 16px;
+                    position: relative;
+                    .input-star-badge {
+                        position: absolute;
+                        color: #FF0000;
+                        font-size: 20px;
+                        left: 100%;
+                    }
+                }
+                .el-date-editor {
+                    width: 100%;
+                    .el-input {
+                        width: 100%;
+                    }
+                }
+                .el-cascader {
+                    width: 100%;
+                }
+                .excel-file-cube {
+                    position: absolute;
+                    display: inline-block;
+                    left: 120px;
+                    right: 0;
+                    top: 5px;
+                    height: 28px;
+                    line-height: 28px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #EEF1F6;
+                        .excel-delete-btn {
+                            display: inline;
+                            color: #AAA;
+                        }
+                        span {
+                            color: #0d93ff;
+                        }
+                    }
+                    .excel-delete-btn {
+                        display: none;
+                        float: right;
+                        margin-right: 5px;
+                        &:hover {
+                            color: #D93025;
+                        }
+                    }
+                }
+                .el-cascader-menus {
+                    z-index: 100;
+                }
+            }
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background-color: #EAEAEA;
+        }
+    }
+    .task-market-chart {
+        display: inline-block;
+        width: 50%;
+        .task-market-chart-cube {
+            margin: 0 2%;
+            width: 96%;
+            height: 840px;
+        }
+    }
+}
+
+.excel-editor-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @extend %cube-shadow;
+    transition: transform .3s ease;
+}
+
+.execute-tree-block {
+    max-height: 420px;
+    overflow-x: hidden;
+}

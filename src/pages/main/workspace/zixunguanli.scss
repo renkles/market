@@ -1,0 +1,103 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.banner-edit-list-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 200px;
+    transition: transform .3s ease;
+    @extend %cube-shadow;
+    .banner-edit-list-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .banner-edit-list-cube {
+        .banner-list-table-style{
+            @extend %table-style;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+        }
+    }
+}
+
+.dialog-content-block {
+    .dialog-content-item{
+        line-height: 36px;
+        padding: 10px 0;
+        .uploaded-img-list {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            .uploaded-img-delete-cube {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.5);
+                display: none;
+                text-align: center;
+                padding: 35px 0;
+                .delete-img-btn {
+                    line-height: 30px;
+                    font-size: 30px;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                    &:hover {
+                        color: #FFA509;
+                    }
+                }
+            }
+            &:hover>.uploaded-img-delete-cube{
+                display: block;
+            }
+        }
+        .upload-img-cube {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            border: 1px dashed #0d93ff;
+            border-radius: 5px;
+            cursor: pointer;
+            .upload-cube-plus {
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                text-align: center;
+                .add-image-btn {
+                    color: #999999;
+                    font-size: 30px;
+                    line-height: 98px;
+                }
+                &:hover>.add-image-btn {
+                    color: #0d93ff;
+                }
+            }
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                -ms-filter: 'alpha(opacity=0)';
+                cursor: pointer;
+                z-index: 100;
+            }
+        }
+    }
+}
+.dialog-btn-list {
+    text-align: center;
+}

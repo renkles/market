@@ -1,0 +1,21 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.query-block {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 720px;
+    @extend %cube-shadow;
+    .query-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .query-search-cube {
+        line-height: 36px;
+        padding: 20px;
+    }
+    .query-list {
+        @extend %table-style;
+    }
+}

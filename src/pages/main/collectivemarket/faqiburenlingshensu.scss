@@ -1,0 +1,31 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.launch-block {
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 20px 40px;
+    min-height: 720px;
+    @extend %cube-shadow;
+    .search-bar {
+        line-height: 36px;
+        padding: 20px 0;
+        border-bottom: 1px solid #F7F7F7;
+        .search-cube {
+            display: inline-block;
+            width: 300px;
+            margin-right: 20px;
+        }
+    }
+    .table-block {
+        padding: 20px 0;
+        .table-style {
+            @extend %table-style;
+        }
+    }
+}
+
+.info-item {
+    padding-left: 20px;
+    line-height: 20px;
+}

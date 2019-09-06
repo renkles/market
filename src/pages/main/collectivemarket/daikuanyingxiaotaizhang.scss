@@ -1,0 +1,56 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.query-block {
+    position: relative;
+    background-color: #FFFFFF;
+    min-height: 300px;
+    padding-bottom: 80px;
+    @extend %cube-shadow;
+    .query-top-title {
+        height: 62px;
+        line-height: 62px;
+        @extend %cube-title;
+    }
+    .query-table {
+        @extend %table-style;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .pagination-box {
+        position: absolute;
+        bottom: 0;
+        height: 62px;
+        width: 100%;
+        padding-top: 15px;
+        text-align: center;
+    }
+    .search-bar-cube {
+        display: inline-block;
+        position: relative;
+        left: 27px;
+        .search-btn {
+            color: #666666;
+            position: absolute;
+            line-height: 30px;
+            width: 30px;
+            text-align: center;
+            top: 20px;
+            right: 10px;
+            cursor: pointer;
+            &:hover {
+                color: $hover-color;
+            }
+        }
+        .search-bar {
+            float: right;
+            display: inline-block;
+            margin: 17px 0;
+            .el-input__inner {
+                border-radius: 18px;
+                background-color: #F2F2F2;
+            }
+        }
+    }
+}

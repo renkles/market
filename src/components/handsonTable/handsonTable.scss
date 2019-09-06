@@ -1,0 +1,17 @@
+@import "../../commonstyle/var";
+@import "../../commonstyle/base";
+
+
+.excel-editor-title {
+    height: 50px;
+    line-height: 50px;
+    @extend %cube-title;
+    .close-btn, .download-btn {
+        float: right;
+        margin-right: 20px;
+        cursor: pointer;
+        &:hover {
+            color: #ff4d51;
+        }
+    }
+}

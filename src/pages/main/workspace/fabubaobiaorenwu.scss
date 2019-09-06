@@ -1,0 +1,205 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.form-task-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 720px;
+    @extend %cube-shadow;
+    transition: transform .3s ease;
+    .form-task-title {
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+        @extend %cube-title;
+    }
+    .form-task-content {
+        .form-task-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #F2F2F2;
+            .input-label {
+                text-align: right;
+                line-height: 36px;
+                font-size: 16px;
+                position: relative;
+                .input-star-badge {
+                    position: absolute;
+                    color: #FF0000;
+                    font-size: 20px;
+                    left: 100%;
+                }
+            }
+            .el-date-editor {
+                width: 100%;
+                .el-input {
+                    width: 100%;
+                }
+            }
+            .el-cascader {
+                width: 100%;
+            }
+            .upload-excel-block {
+                display: inline-block;
+                margin-top: 5px;
+                position: relative;
+                input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    -ms-filter: 'alpha(opacity=0)';
+                    cursor: pointer;
+                    z-index: 100;
+                }
+            }
+            .check-history-btn {
+                position: relative;
+                top: 8px;
+                line-height: 20px;
+                color: #0D7CFA;
+                cursor: pointer;
+                margin-left: 20px;
+                &:hover {
+                    color: #ff4d51;
+                }
+            }
+            .excel-file-item {
+                height: 30px;
+                margin: 10px 0;
+                line-height: 22px;
+                padding: 4px 5px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color .5s ease;
+                &:hover {
+                    background-color: #EEF1F6;
+                    .excel-delete-btn {
+                        display: inline;
+                        color: #AAA;
+                    }
+                    span {
+                        color: #0d93ff;
+                    }
+                }
+                .excel-delete-btn {
+                    display: none;
+                    float: right;
+                    &:hover {
+                        color: #D93025;
+                    }
+                }
+            }
+        }
+    }
+    .confirm-btn-block {
+        text-align: center;
+        margin: 30px 0;
+    }
+}
+
+.excel-editor-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @extend %cube-shadow;
+    transition: transform .3s ease;
+}
+
+.history-template-block {
+    position: absolute;
+    width: 35%;
+    height: 720px;
+    top: 0;
+    right: 0;
+    //padding: 20px 20px 0 30px;
+    background-color: #FFFFFF;
+    @extend %cube-shadow;
+    box-shadow:0 0 8px #A0D6FF;
+    transition: transform .3s ease;
+    .history-template-list {
+        padding-top: 20px;
+        .history-template-item {
+            border-bottom: 1px solid #EAEAEA;
+            padding: 6px 20px 6px 30px;
+            .history-template-info {
+                display: inline-block;
+                width: 70%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                .history-template-title {
+                    line-height: 18px;
+                    color: #7E8B9D;
+                }
+                .history-template-excel {
+                    line-height: 18px;
+                    color: #7E8B9D;
+                    .excel-template-history {
+                        font-size: 14px;
+                        margin-right: 5px;
+                        color: #0AB169;
+                    }
+                }
+                .history-template-time {
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #CCCCCC;
+                }
+            }
+            .update-btn {
+                color: #0ab169;
+                &:hover {
+                    animation: loop-update 1.5s ease infinite;
+                }
+            }
+            .delete-template-btn {
+                margin-right: 20px;
+                color: #EF6A6E;
+                &:hover {
+                    animation: loop-delete 1.5s ease infinite;
+                }
+            }
+            .update-btn,.delete-template-btn {
+                float: right;
+                line-height: 18px;
+                margin-top: 17px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            &:hover {
+                background-color: #F0F0F0;
+            }
+        }
+        .no-history-template {
+            color: #7E8B9D;
+            line-height: 500px;
+            text-align: center;
+        }
+    }
+}
+
+@keyframes loop-delete {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 106, 110, .5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(239, 106, 110, 0);
+    }
+}
+
+@keyframes loop-update {
+    0% {
+        box-shadow: 0 0 0 0 rgba(10, 177, 105, .5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(10, 177, 105, 0);
+    }
+}

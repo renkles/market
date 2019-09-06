@@ -1,0 +1,44 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.market-block {
+    background-color: #FFFFFF;
+    min-height: 720px;
+    @extend %cube-shadow;
+    .market-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .market-cube {
+        padding: 20px 20px 0 20px;
+        .top-cube {
+            line-height: 36px;
+            margin-bottom: 40px;
+        }
+        .member-list-block {
+            display: inline-block;
+            width: 58%;
+            height: 550px;
+            margin-right: 2%;
+            @extend %cube-shadow;
+        }
+        .right-chart-block {
+            display: inline-block;
+            width: 40%;
+            height: 550px;
+            @extend %cube-shadow;
+            .chart-title {
+                font-size: 14px;
+                height: 42px;
+                line-height: 42px;
+                @extend %cube-title;
+            }
+            .pieChart-cube {
+                height: 500px;
+                padding: 20px;
+                position: relative;
+            }
+        }
+    }
+}

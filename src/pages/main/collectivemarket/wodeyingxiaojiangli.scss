@@ -1,0 +1,52 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.market-block {
+    background-color: #FFFFFF;
+    min-height: 720px;
+    @extend %cube-shadow;
+    .market-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .market-cube {
+        padding: 20px 20px 0 20px;
+        .top-cube {
+            line-height: 36px;
+            margin-bottom: 40px;
+        }
+        .pie-block {
+            height: 250px;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            @extend %cube-shadow;
+            .chart-title {
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+            .pie-cube {
+                height: 200px;
+            }
+        }
+        .bar-block {
+            height: 280px;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            @extend %cube-shadow;
+            .chart-title {
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                letter-spacing: 1px;
+                font-weight: bold;
+            }
+            .bar-cube {
+                height: 230px;
+            }
+        }
+    }
+}

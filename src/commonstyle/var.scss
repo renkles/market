@@ -1,0 +1,6 @@
+//hover色
+$hover-color: #1C7AFF;
+//滚动条
+$scrollbar-color: #20A0FF;
+$scrollbar-bgcolor: lighten($scrollbar-color,40%);
+$scrollbar-shadow-color: rgba(darken($scrollbar-color,40%),.3);

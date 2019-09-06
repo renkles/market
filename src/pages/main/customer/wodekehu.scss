@@ -1,0 +1,194 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+$menu-bg: #FFFFFF;
+$menu-item-bg: #FAFAFA;
+$menu-hover: #FFFFFF;
+$menu-item-hover: #F7F7F7;
+$icon-hover-color: #1C7AFF;
+
+.customer-block {
+    display: inline-block;
+    width: 38%;
+    background-color: #FFFFFF;
+    height: 720px;
+    @extend %cube-shadow;
+    .customer-list-menu {
+        height: 660px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .el-submenu__title {
+            border-bottom: 1px solid #F9F9F9;
+            .menu-icon-style {
+                color: #48576A;
+                float: right;
+                margin-right: 30px;
+                transform: translateY(-2px);
+                cursor: pointer;
+                &:hover {
+                    color: $icon-hover-color;
+                }
+            }
+        }
+        .el-menu-item {
+            border-bottom: 1px solid #F9F9F9;
+            position: relative;
+            background-color: $menu-item-bg;
+            .menu-icon-style {
+                color: #48576A;
+                float: right;
+                margin-right: 10px;
+                transform: translateY(-2px);
+                cursor: pointer;
+                &:hover {
+                    color: $icon-hover-color;
+                }
+                &:first-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        ul.el-menu {
+            background-color: $menu-bg;
+        }
+        .el-submenu .el-menu-item:hover {
+            background-color: $menu-item-hover;
+            color: #48576A;
+        }
+        .el-submenu .el-submenu__title:hover {
+            background-color: $menu-hover;
+            color: #48576A;
+        }
+    }
+}
+
+.customer-info-block {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 60%;
+    background-color: #FFFFFF;
+    height: 720px;
+    transition: transform .5s ease;
+    @extend %cube-shadow;
+    .customer-info-cube {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        .customer-info-title {
+            padding-left: 20px;
+            height: 45px;
+            line-height: 45px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .customer-info-head {
+            width: 120px;
+            height: 120px;
+            margin: 10px 0 10px 20px;
+            border-radius: 5px;
+        }
+        .customer-info-list {
+            margin-bottom: 10px;
+            padding: 0 20px;
+            .customer-info-item {
+                padding: 10px 0;
+                line-height: 20px;
+                border-bottom: 1px solid #F1F1F1;
+                .customer-info-value {
+                    display: inline-block;
+                    overflow: hidden;
+                    width: 200px;
+                    float: right;
+                    color: #7B6CDC;
+                    text-align: right;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+                }
+            }
+        }
+        .controller-list-cube {
+            .controller-list-title {
+                padding-left: 20px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 15px;
+                letter-spacing: 2px;
+                font-weight: bold;
+            }
+            .controller-list-box {
+                height: 224px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .el-submenu__title {
+                    border-bottom: 1px solid #F9F9F9;
+                }
+                .el-menu-item {
+                    border-bottom: 1px solid #F9F9F9;
+                    position: relative;
+                    background-color: $menu-item-bg;
+                }
+                ul.el-menu {
+                    background-color: $menu-bg;
+                }
+                .el-submenu .el-menu-item:hover {
+                    background-color: $menu-item-hover;
+                    color: #48576A;
+                }
+                .el-submenu .el-submenu__title:hover {
+                    background-color: $menu-hover;
+                    color: #48576A;
+                }
+            }
+        }
+    }
+    .customer-product-cube {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        padding: 0 40px;
+        .customer-product-title {
+            height: 45px;
+            line-height: 45px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .customer-product-list-box {
+            height: 670px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .product-desc-list-title {
+                height: 40px;
+                line-height: 40px;
+                font-weight: bold;
+            }
+            .product-desc-list-cube {
+
+            }
+        }
+    }
+    .empty-customer-desc {
+        color: #999999;
+        line-height: 500px;
+        text-align: center;
+    }
+}
+
+
+.input-row-item {
+    line-height: 36px;
+    padding: 10px 0;
+    border-bottom: 1px solid #F2F2F2;
+}

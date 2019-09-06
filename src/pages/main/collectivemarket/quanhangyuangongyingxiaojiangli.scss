@@ -1,0 +1,29 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.collective-container {
+    background-color: #FFFFFF;
+    min-height: 720px;
+    @extend %cube-shadow;
+    .collective-title {
+        height: 50px;
+        line-height: 50px;
+        @extend %cube-title;
+    }
+    .search-block {
+        padding: 0 20px;
+        margin: 20px 0 10px 20px;
+        .search-cube {
+            display: inline-block;
+            line-height: 36px;
+            margin-right: 40px;
+            margin-bottom: 20px;
+        }
+    }
+    .table-block {
+        padding: 0 40px;
+        .table-style {
+            @extend %table-style;
+        }
+    }
+}

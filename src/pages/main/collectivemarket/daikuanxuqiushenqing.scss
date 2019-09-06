@@ -1,0 +1,26 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.content-box{
+  background-color: #FFFFFF;
+  padding: 20px 40px;
+  min-height: 720px;
+  @extend %cube-shadow;
+  .content-item {
+    line-height: 36px;
+    padding: 20px 0;
+    border-bottom: 1px solid #F7F7F7;
+  }
+  .btn-confirm {
+    padding: 10px 60px;
+  }
+  .el-date-editor {
+    width: 100%;
+    .el-input {
+      width: 100%;
+    }
+  }
+  .select_text::-webkit-input-placeholder{
+    text-align: right;
+  }
+}

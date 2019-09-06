@@ -1,0 +1,19 @@
+@import "../../../commonstyle/var";
+@import "../../../commonstyle/base";
+
+.check-block {
+    background-color: #FFFFFF;
+    padding: 20px 40px;
+    min-height: 300px;
+    @extend %cube-shadow;
+    .check-block-item {
+        padding: 20px 0;
+        line-height: 22px;
+        border-bottom: 1px solid #F7F7F7;
+        letter-spacing: 2px;
+    }
+    .btn-box {
+        text-align: center;
+        margin: 40px 0;
+    }
+}
